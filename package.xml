@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>antenna_rotator</name>
+  <name>ros_antenna_rotator</name>
   <version>0.0.0</version>
   <description>The antenna_rotator package</description>
 

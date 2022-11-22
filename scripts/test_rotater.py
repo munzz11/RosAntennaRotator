@@ -1,11 +1,9 @@
-import socket
+import time
+import telnetlib
 
-buffer = 1024
-
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.connect(('localhost', 7373))
-print("Connected")
-
-while True:
-    data = s.recv(buffer)
-    print(data)
+HOST ="localhost"
+tn=telnetlib.Telnet()
+tn.open(HOST,"7373")
+tn.write(b"M90\n")
+tn.write(b"C\n")
+print(tn.read_all().decode('ascii'))
